@@ -1,4 +1,4 @@
-package model;
+package com.rgls.medpresc.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

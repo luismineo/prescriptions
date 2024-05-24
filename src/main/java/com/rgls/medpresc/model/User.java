@@ -1,9 +1,9 @@
-package model;
+package com.rgls.medpresc.model;
 
+import com.rgls.medpresc.model.enums.Role;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import model.enums.Role;
 
 import java.util.Set;
 
@@ -22,7 +22,21 @@ public class User {
     private String username;
     private String password;
 
+
     @ElementCollection(fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
+
+
+    public User(Long id, String firstName, String lastName, String username, String password, Set<Role> roles) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
+    }
+
+    public User() {
+    }
 }
