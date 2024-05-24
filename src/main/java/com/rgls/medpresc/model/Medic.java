@@ -1,5 +1,6 @@
 package com.rgls.medpresc.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -19,6 +20,7 @@ public class Medic extends User{
     private String certDigital;
 
     @OneToMany(mappedBy = "medic")
+    @JsonIgnore
     private List<Prescription> prescription;
 
     public Medic(Long id, String firstName, String lastName, String username, String password, Set<Role> roles, String crm, String certDigital) {
