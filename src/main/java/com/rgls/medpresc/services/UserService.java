@@ -19,7 +19,7 @@ public class UserService {
     @Autowired
     private PharmacyRepository pharmacyRepository;
 
-    public void CreateMedic(Medic medic){
+    public void createMedic(Medic medic){
         try{
             medicRepository.save(medic);
         }catch (RuntimeException e){
@@ -27,17 +27,17 @@ public class UserService {
         }
     }
 
-    public void CreatePharmacy(Pharmacy pharmacy){
+    public void createPharmacy(Pharmacy pharmacy){
         try{
             pharmacyRepository.save(pharmacy);
         }catch (RuntimeException e){
             throw new IllegalArgumentException(e.getMessage());
         }
     }
-
-    public Pair<List<Medic>, List<Pharmacy>> FindUsers(){
-        var medic = medicRepository.findAll();
-        var pharmacy = pharmacyRepository.findAll();
-        return new Pair<>(medic, pharmacy);
+    public List<Medic> findAllMedics(){
+        return medicRepository.findAll();
+    }
+    public List<Pharmacy> findAllPharmacy(){
+        return pharmacyRepository.findAll();
     }
 }

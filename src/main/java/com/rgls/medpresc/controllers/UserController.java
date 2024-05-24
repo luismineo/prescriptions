@@ -24,7 +24,7 @@ public class UserController {
     @PostMapping("/medic")
     public ResponseEntity<Void> postMedic(@RequestBody Medic medic){
         try{
-            service.CreateMedic(medic);
+            service.createMedic(medic);
             return ResponseEntity.status(HttpStatus.CREATED).build();
         }catch (Exception e){
             return ResponseEntity.badRequest().build();
@@ -34,7 +34,7 @@ public class UserController {
     @PostMapping("/pharmacy")
     public ResponseEntity<Void> postPharmacy(@RequestBody Pharmacy pharmacy){
         try{
-            service.CreatePharmacy(pharmacy);
+            service.createPharmacy(pharmacy);
             return ResponseEntity.status(HttpStatus.CREATED).build();
         }catch (Exception e){
             return ResponseEntity.badRequest().build();
@@ -43,8 +43,9 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<MedicAndPharmacyDto> getMedic(){
-        var user = service.FindUsers();
-        MedicAndPharmacyDto dto = new MedicAndPharmacyDto(user.a, user.b);
+        List<Medic> medics = service.findAllMedics();
+        List<Pharmacy> pharmacies = service.findAllPharmacy();
+        MedicAndPharmacyDto dto = new MedicAndPharmacyDto(medics, pharmacies);
         return ResponseEntity.ok(dto);
     }
 }
