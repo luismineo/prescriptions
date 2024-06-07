@@ -2,9 +2,7 @@ package com.rgls.medpresc.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 import com.rgls.medpresc.model.enums.Role;
@@ -29,11 +27,5 @@ public class Medic extends User{
         this.certDigital = certDigital;
     }
 
-    public Medic() {
-    }
-    /*
-    public Medic(){
-        this.getRoles().add(Role.MEDIC);
-    }
-     */
+    public Medic() {}
 }

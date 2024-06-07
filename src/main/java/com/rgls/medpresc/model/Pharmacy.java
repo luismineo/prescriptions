@@ -18,11 +18,5 @@ public class Pharmacy extends User{
         this.cnpj = cnpj;
     }
 
-    public Pharmacy() {
-    }
-    /*
-    public Pharmacy(){
-        this.getRoles().add(Role.PHARMACY);
-    }
-    */
+    public Pharmacy() {}
 }
