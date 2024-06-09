@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização de Receita</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Farmácia e Hospital</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="loginMedico.html">Login Médico</a></li>
+                    <li><a href="loginFarmacia.html">Login Farmácia</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Visualização de Receita</h2>
+        <form id="visualizarReceitaForm">
+            <label for="codigoReceita">Código da Receita</label>
+            <input type="text" id="codigoReceita" name="codigoReceita" required>
+
+            <input type="submit" value="Buscar Receita">
+        </form>
+        
+        <div id="detalhesReceita">
+            <!-- Aqui serão exibidos os detalhes da receita após a busca -->
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
