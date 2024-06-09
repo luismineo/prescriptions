@@ -74,7 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 nomePaciente: "João da Silva",
                 dataNascimento: "1990-01-01",
                 cpf: "123.456.789-00",
-                planoDeSaude: "Plano Exemplo",
+                // OPTIONAL
+                // planoDeSaude: "Plano Exemplo",
                 nomeMedicamento: "Medicamento Exemplo",
                 dosagem: "500mg",
                 quantidade: 20,
@@ -82,13 +83,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 observacoes: "Tomar após as refeições"
             };
 
+            // OPTIONAL         
+            // <p><strong>Plano de Saúde:</strong> ${receitaExemplo.planoDeSaude}</p>
             const detalhesReceitaDiv = document.getElementById('detalhesReceita');
             detalhesReceitaDiv.innerHTML = `
                 <h3>Detalhes da Receita</h3>
                 <p><strong>Nome do Paciente:</strong> ${receitaExemplo.nomePaciente}</p>
                 <p><strong>Data de Nascimento:</strong> ${receitaExemplo.dataNascimento}</p>
                 <p><strong>CPF:</strong> ${receitaExemplo.cpf}</p>
-                <p><strong>Plano de Saúde:</strong> ${receitaExemplo.planoDeSaude}</p>
                 <p><strong>Nome do Medicamento:</strong> ${receitaExemplo.nomeMedicamento}</p>
                 <p><strong>Dosagem:</strong> ${receitaExemplo.dosagem}</p>
                 <p><strong>Quantidade:</strong> ${receitaExemplo.quantidade}</p>
