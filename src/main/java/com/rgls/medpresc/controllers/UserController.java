@@ -38,7 +38,7 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<MedicAndPharmacyDto> getMedic() {
+    public ResponseEntity<MedicAndPharmacyDto> getMedicAndPharmacy() {
         List<Medic> medics = service.findAllMedics();
         List<Pharmacy> pharmacies = service.findAllPharmacy();
         MedicAndPharmacyDto dto = new MedicAndPharmacyDto(medics, pharmacies);

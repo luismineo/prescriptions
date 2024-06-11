@@ -29,7 +29,7 @@ public class Prescription {
     private String drugs;
     private String dosage;
     private String quantity;
-    private String admnMethod;
+    private String adminMethod;
     private String observations;
     private String digitalSignature;
 }
