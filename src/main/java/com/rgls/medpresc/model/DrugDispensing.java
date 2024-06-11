@@ -1,14 +1,16 @@
 package com.rgls.medpresc.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 
 @Getter
 @Setter
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class DrugDispensing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
